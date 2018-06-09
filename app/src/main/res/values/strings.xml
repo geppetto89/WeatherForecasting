@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">NiceDayForecasting</string>
+    <string name="weather_preferences">Weather Preferences</string>
+    <string name="min_temp_n_c">Min Temp\n(°C)</string>
+    <string name="max_temp_n_c">Max Temp\n(°C)</string>
+    <string name="max_humidity_n">Max Humidity\n(%)</string>
+    <string name="max_clouds_n">Max Clouds\n(%)</string>
+    <string name="max_wind_speed_n_m_s">Max Wind speed\n(m/s)</string>
+    <string name="max_rain_n_mm">Max Rain 3h\n(mm)</string>
+    <string name="weather_preference_settings">Weather Preference Settings</string>
+    <string name="set_your_weather_preferences_n">Set your weather preferences</string>
+    <string name="gps_req">GPS REQUIRED</string>
+    <string name="alert_message">This app requires your gps. Do you want to turn it on?</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="loading_info">Loading info...</string>
+    <string name="problems_fetching">Couldn\'t get it..</string>
+    <string name="something_went_wrong">Something went wrong!</string>
+    <string name="position_not_found">Couldn\'t find your position</string>
+    <string name="based_on_your_preference_ntoday_s_weather_will_be">Based on your preferences\ntoday\'s weather will be …</string>
+</resources>

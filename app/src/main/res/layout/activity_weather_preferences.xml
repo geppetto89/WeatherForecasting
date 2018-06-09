@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.mobile.micmen.nicedayforecasting.widget.MinTempEditText
+                android:id="@+id/minTemp"
+                style="@style/WeatherPreferenceEditText"
+                android:layout_marginTop="8dp"
+                android:hint="0"
+                android:inputType="numberSigned"
+                app:layout_constraintBottom_toTopOf="@+id/maxTemp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.07999998"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <android.mobile.micmen.nicedayforecasting.widget.MaxTempEditText
+                android:id="@+id/maxTemp"
+                style="@style/WeatherPreferenceEditText"
+                android:layout_marginTop="3dp"
+                android:hint="50"
+                android:inputType="numberSigned"
+                app:layout_constraintBottom_toTopOf="@+id/humidity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/minTemp" />
+
+            <android.mobile.micmen.nicedayforecasting.widget.HumidityCloudsEditText
+                android:id="@+id/humidity"
+                style="@style/WeatherPreferenceEditText"
+                android:layout_marginTop="3dp"
+                android:hint="65"
+                android:inputType="numberSigned"
+                app:layout_constraintBottom_toTopOf="@+id/clouds"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/maxTemp" />
+
+            <android.mobile.micmen.nicedayforecasting.widget.HumidityCloudsEditText
+                android:id="@+id/clouds"
+                style="@style/WeatherPreferenceEditText"
+                android:layout_marginTop="3dp"
+                android:hint="50"
+                android:inputType="numberSigned"
+                app:layout_constraintBottom_toTopOf="@+id/wind"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/humidity" />
+
+            <android.mobile.micmen.nicedayforecasting.widget.WindEditText
+                android:id="@+id/wind"
+                style="@style/WeatherPreferenceEditText"
+                android:layout_marginTop="3dp"
+                android:hint="5.0"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toTopOf="@+id/rain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clouds" />
+
+            <android.mobile.micmen.nicedayforecasting.widget.RainEditText
+                android:id="@+id/rain"
+                style="@style/WeatherPreferenceEditText"
+                android:layout_marginTop="3dp"
+                android:hint="3.0"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toTopOf="@+id/save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wind" />
+
+            <TextView
+                android:id="@+id/save"
+                style="@style/WeatherPreferenceEditText"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/save_button_selector"
+                android:enabled="false"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="SAVE"
+                android:textColor="@color/save_button_text_color_selector"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView10"
+                style="@style/WeatherPreferenceLabel"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/min_temp_n_c"
+                app:layout_constraintBottom_toBottomOf="@+id/minTemp"
+                app:layout_constraintEnd_toStartOf="@+id/minTemp"
+                app:layout_constraintTop_toTopOf="@+id/minTemp" />
+
+            <TextView
+                android:id="@+id/textView11"
+                style="@style/WeatherPreferenceLabel"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/max_temp_n_c"
+                app:layout_constraintBottom_toBottomOf="@+id/maxTemp"
+                app:layout_constraintEnd_toStartOf="@+id/maxTemp"
+                app:layout_constraintTop_toTopOf="@+id/maxTemp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                style="@style/WeatherPreferenceLabel"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/max_humidity_n"
+                app:layout_constraintBottom_toBottomOf="@+id/humidity"
+                app:layout_constraintEnd_toStartOf="@+id/humidity"
+                app:layout_constraintTop_toTopOf="@+id/humidity" />
+
+            <TextView
+                android:id="@+id/textView13"
+                style="@style/WeatherPreferenceLabel"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/max_clouds_n"
+                app:layout_constraintBottom_toBottomOf="@+id/clouds"
+                app:layout_constraintEnd_toStartOf="@+id/clouds"
+                app:layout_constraintTop_toTopOf="@+id/clouds" />
+
+            <TextView
+                android:id="@+id/textView14"
+                style="@style/WeatherPreferenceLabel"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/max_wind_speed_n_m_s"
+                app:layout_constraintBottom_toBottomOf="@+id/wind"
+                app:layout_constraintEnd_toStartOf="@+id/wind"
+                app:layout_constraintTop_toTopOf="@+id/wind" />
+
+            <TextView
+                android:id="@+id/textView15"
+                style="@style/WeatherPreferenceLabel"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/max_rain_n_mm"
+                app:layout_constraintBottom_toBottomOf="@+id/rain"
+                app:layout_constraintEnd_toStartOf="@+id/rain"
+                app:layout_constraintTop_toTopOf="@+id/rain" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="@string/weather_preference_settings"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/set_your_weather_preferences_n"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>
